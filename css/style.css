@@ -1,4 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
 :root {
     --gradTop: hsl(144, 100%, 89%);
     --gradBottom: hsl(42, 94%, 76%);
+
+    --gradDark: hsl(198, 44%, 11%);
+    --gradLight: hsl(198, 39%, 29%);
+
+    --textSmall: 20px;
+    --textMedium: 32px;
+    --textLarge: 46px;
+}
+
+body {
+    font-family: Merriweather, serif;
+}
+
+main {
+    background: linear-gradient(to bottom, var(--gradTop), var(--gradBottom));
+}
+
+/* --------------------------------- header --------------------------------- */
+
+.header-container {
+    position: fixed;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+}
+
+.header-block-left {
+    margin: auto 0;
+}
+
+.header-block-right {
+    margin: auto 0;
+}
+
+.header-text {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: var(--textSmall);
+}
+
+/* --------------------------------- intro --------------------------------- */
+
+.intro-container {
+    min-height: 100vh;
+}
+
+.intro-avatar {
+    padding-top: 150px;
+}
+
+.intro-img {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.intro-name-text {
+    font-size: var(--textLarge);
+    text-align: center;
+}
+
+.intro-text {
+    font-size: var(--textMedium);
+    text-align: center;
+}
+
+.intro-social {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.intro-social-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* --------------------------------- about me --------------------------------- */
+
+.about-me-container {
+    padding-bottom: 200px;
+}
+
+.about-me-field {
+    background-color: white;
+    padding: 40px;
+}
+
+.about-me-text {
+    font-size: var(--textSmall);
+}
+
+/* --------------------------------- portfolio --------------------------------- */
+
+.portfolio-container {
+    padding-bottom: 200px;
+}
+
+.portfolio-cards-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 350px;
+    background-color: white;
+    padding: 40px 40px 72px;
+}
+
+.project-name {
+    font-size: var(--textMedium);
+    text-align: center;
+}
+
+.project-img-holder {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.project-img {
+    margin: 20px auto;
+    height: 100px;
+    width: auto;
+}
+
+.project-link {
+   margin-top: 60px;
+
+}
+
+.project-link-img {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+/* --------------------------------- mixins --------------------------------- */
+
+.text-decoration-remover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.text-decoration-remover:visited, .text-decoration-remover:hover, .text-decoration-remover:active {
+    color: inherit;
+}
+
+.section-title {
+    font-size: var(--textMedium);
+    text-align: center;
+}
+
+.section-card {
+    font-size: var(--textSmall);
+    line-height: var(--textMedium);
+    margin-bottom: 10px;
 }

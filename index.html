@@ -9,26 +9,114 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image/png" href="favicon.ico"/>
+
+    <script src="js/changeSocialLogo.js"></script>
 </head>
 
 <body>
 
-<header>
-    <div>
-        <h1>Trifonova Yana</h1>
+<main id="main">
+    <header class="header-container">
+        <div class="header-block-left">
+            <a href="#main" class="header-text text-decoration-remover">Trifonova Yana</a>
+        </div>
+
+        <div class="header-block-right">
+            <a href="#about-me" class="header-text text-decoration-remover">About me</a>
+            <a href="#portfolio" class="header-text text-decoration-remover">Portfolio</a>
+            <a class="header-text text-decoration-remover">Timeline</a>
+        </div>
+    </header>
+
+    <div class="intro-container">
+        <div class="intro-avatar">
+            <img class="intro-img" src="img/avatar.jpg" alt="Yana Trifonova">
+        </div>
+
+        <div class="intro-name">
+            <p class="intro-name-text">Trifonova Yana</p>
+        </div>
+
+        <div class="intro-about">
+            <p class="intro-text">Front end Developer</p>
+        </div>
+        <div class="intro-social">
+            <a class="text-decoration-remover" target="_blank" href="https://github.com/YanaTrifonova">
+                <img class="intro-social-img" onmouseover="onOver(this, 'github');" onmouseout="onOut(this, 'github');"
+                     src="img/github_dark.svg">
+            </a>
+            <a class="text-decoration-remover" target="_blank"
+               href="https://www.linkedin.com/in/yana-trifonova-0920b3179/">
+                <img class="intro-social-img" onmouseover="onOver(this, 'linkedin');"
+                     onmouseout="onOut(this, 'linkedin');" src="img/linkedin_dark.svg">
+            </a>
+            <a class="text-decoration-remover" target="_blank" href="https://www.instagram.com/yana_trifonova/">
+                <img class="intro-social-img" onmouseover="onOver(this, 'instagram');"
+                     onmouseout="onOut(this, 'instagram');" src="img/instagram_dark.svg">
+            </a>
+            <a class="text-decoration-remover" href="mailto: trifonova.yana.prof@gmail.com">
+                <img class="intro-social-img" onmouseover="onOver(this, 'mail');" onmouseout="onOut(this, 'mail');"
+                     src="img/mail_dark.svg">
+            </a>
+        </div>
     </div>
 
-    <div>
-        <h1>About me</h1>
-        <h1>Portfolio</h1>
-        <h1>Timeline</h1>
+    <div class="about-me-container">
+        <p id="about-me" class="section-title">About me</p>
+
+        <div class="about-me-field">
+            <p class="about-me-text">Hi!</p>
+            <p class="about-me-text">I'm self-taught Front end Developer. Have fun learning new and to improve my skills to become a FE
+                ninja.</p>
+        </div>
     </div>
 
-</header>
+    <div class="portfolio-container">
+        <p id="portfolio" class="section-title">Portfolio</p>
 
-<main>
-    <div>
+        <div class="portfolio-cards-container">
+            <div class="card">
+                <p class="project-name">Moon Project</p>
+                <div class="project-img-holder">
+                    <img class="project-img" src="img/moon_project.jpg">
+                </div>
+                <p class="section-card">Moon project was the first project, that I made on my own. I have just
+                    watched plenty of online courses and read tons of documentation.</p>
+                <p class="section-card">Used technologies: HTML, CSS, JavaScript, jQuery, jQuery Quiz Plugin</p>
+                <div class="project-link">
+                    <a class="text-decoration-remover" href="https://github.com/YanaTrifonova/moonProject" target="_blank">
+                        <img class="project-link-img" src="img/external-link.svg">Watch on Github</a>
+                </div>
+            </div>
 
+            <div class="card">
+                <p class="project-name">Cocktail blog</p>
+                <div class="project-img-holder">
+                    <img class="project-img" src="img/shark_logo.png">
+                </div>
+                <p class="section-card">desc.</p>
+                <p class="section-card">Used technologies: HTML, SCSS, </p>
+                <div class="project-link">
+                    <a class="text-decoration-remover" href="https://github.com/YanaTrifonova/cocktail_blog" target="_blank">
+                        <img class="project-link-img" src="img/external-link.svg">Watch on Github</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <p class="project-name">Burger</p>
+                <div class="project-img-holder">
+                    <img class="project-img" src="img/unnamed.png">
+                </div>
+                <p class="section-card">desc.</p>
+                <p class="section-card">Used technologies: HTML, Typescript, CSS, React, Redux</p>
+                <div class="project-link">
+                    <a class="text-decoration-remover">
+                        <img class="project-link-img" src="img/external-link.svg">Watch on Github (still in development)</a>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
