@@ -1,12 +1,12 @@
 let ticking = false;
-let last_known_scroll_position = 0;
+let lastKnownScrollPosition = 0;
 
 function removeMouseImage(element) {
     element.remove();
 }
 
 window.addEventListener('scroll', function (e) {
-    last_known_scroll_position = window.scrollY;
+    lastKnownScrollPosition = window.scrollY;
 
     let element = document.getElementById("scroll-item");
 
