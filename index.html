@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
 
 <head>
     <meta charset="utf-8">
     <title>My website</title>
-    <meta name="description" content="">
+    <meta name="description" content="my website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" href="favicon.ico"/>
 
     <script src="js/changeSocialLogo.js"></script>
+    <script src="js/removeMouseHintOnScrol.js"></script>
 </head>
 
 <body>
@@ -42,24 +43,29 @@
         <div class="intro-about">
             <p class="intro-text">Front end Developer</p>
         </div>
+
         <div class="intro-social">
             <a class="text-decoration-remover" target="_blank" href="https://github.com/YanaTrifonova">
                 <img class="intro-social-img" onmouseover="onOver(this, 'github');" onmouseout="onOut(this, 'github');"
-                     src="img/github_dark.svg">
+                     src="img/github_dark.svg" alt="github">
             </a>
             <a class="text-decoration-remover" target="_blank"
                href="https://www.linkedin.com/in/yana-trifonova-0920b3179/">
                 <img class="intro-social-img" onmouseover="onOver(this, 'linkedin');"
-                     onmouseout="onOut(this, 'linkedin');" src="img/linkedin_dark.svg">
+                     onmouseout="onOut(this, 'linkedin');" src="img/linkedin_dark.svg" alt="linked in">
             </a>
             <a class="text-decoration-remover" target="_blank" href="https://www.instagram.com/yana_trifonova/">
                 <img class="intro-social-img" onmouseover="onOver(this, 'instagram');"
-                     onmouseout="onOut(this, 'instagram');" src="img/instagram_dark.svg">
+                     onmouseout="onOut(this, 'instagram');" src="img/instagram_dark.svg" alt="instagram">
             </a>
             <a class="text-decoration-remover" href="mailto: trifonova.yana.prof@gmail.com">
                 <img class="intro-social-img" onmouseover="onOver(this, 'mail');" onmouseout="onOut(this, 'mail');"
-                     src="img/mail_dark.svg">
+                     src="img/mail_dark.svg" alt="e-mail">
             </a>
+        </div>
+
+        <div id="scroll-item" class="intro-scroll-container">
+            <img class="intro-scroll-img intro-scroll-animation" src="img/mouse-clicker-dark.svg">
         </div>
     </div>
 

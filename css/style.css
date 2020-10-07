@@ -5,7 +5,7 @@
     --gradBottomLight: hsl(42, 94%, 76%);
 
     --gradTopDark: hsl(198, 44%, 11%);
-    --gradBottomLight: hsl(198, 39%, 29%);
+    --gradBottomDark: hsl(198, 39%, 29%);
 
     --textSmall: 20px;
     --textMedium: 32px;
@@ -84,6 +84,33 @@ main {
     height: 20px;
     margin-right: 15px;
     margin-left: 15px;
+}
+
+.intro-scroll-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.intro-scroll-img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 50px;
+}
+
+.intro-scroll-animation {
+    animation-duration: 1.5s;
+    animation-iteration-count: 3;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    transform-origin: bottom;
+}
+
+@keyframes bounce {
+    0%   { transform: translate( -50%, 50%); }
+    20%  { transform: translate(-50%, -30px); }
+    50%  { transform: translate( -50%, 50%); }
+    100% { transform: translate( -50%, 50%); }
 }
 
 /* --------------------------------- about me --------------------------------- */
