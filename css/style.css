@@ -199,6 +199,66 @@ main {
     margin-left: auto;
 }
 
+.timeline-card-animation {
+    visibility: visible;
+    animation-delay: 10s;
+}
+
+.timeline-card-animation-left {
+    animation: appear-left 0.7s;
+}
+
+@keyframes appear-left {
+    0% {
+        transform: translate(-20px, 0);
+        opacity: 0;
+    }
+    60% {
+        transform: translate(100px, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.timeline-card-animation-right {
+    animation: appear-right 0.7s;
+}
+
+@keyframes appear-right {
+    0% {
+        transform: translate(20px, 0);
+        opacity: 0;
+    }
+    60% {
+        transform: translate(-100px, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.timeline-img-item-animation {
+    visibility: visible;
+    animation: beat 0.7s;
+}
+
+@keyframes beat {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .timeline-title-text {
     font-size: var(--textMedium);
 }
