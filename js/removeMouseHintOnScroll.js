@@ -2,7 +2,7 @@ let ticking = false;
 let lastKnownScrollPosition = 0;
 
 function removeMouseImage(element) {
-    element.remove();
+    element.firstElementChild.classList.remove("intro-scroll-animation");
 }
 
 window.addEventListener('scroll', function (e) {

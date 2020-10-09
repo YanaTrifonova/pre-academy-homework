@@ -101,6 +101,7 @@ main {
     position: absolute;
     bottom: 0;
     left: 50%;
+    margin-left: -15px;
 }
 
 .intro-scroll-img {
@@ -115,14 +116,13 @@ main {
     animation-name: bounce;
     animation-timing-function: ease;
     transform-origin: bottom;
-    transform: translate(-50%, 0);
 }
 
 @keyframes bounce {
-    0%   { transform: translate(-50%, 0); }
-    20%  { transform: translate(-50%, -30px); }
-    50%  { transform: translate(-50%, 0); }
-    100% { transform: translate(-50%, 0); }
+    0%   { transform: translate(0, 0); }
+    20%  { transform: translate(0, -30px); }
+    50%  { transform: translate(0, 0); }
+    100% { transform: translate(0, 0); }
 }
 
 /* --------------------------------- about me --------------------------------- */
