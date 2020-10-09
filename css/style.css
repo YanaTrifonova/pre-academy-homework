@@ -3,16 +3,6 @@
 /* --------------------------------- variables --------------------------------- */
 
 :root {
-    --gradTopLight: hsl(144, 100%, 89%);
-    --gradBottomLight: hsl(42, 94%, 76%);
-
-    --gradTopDark: hsl(198, 44%, 11%);
-    --gradBottomDark: hsl(198, 39%, 29%);
-
-    --white: hsl(0, 100%, 99%);
-    --grey: hsl(0, 0%, 33%);
-    --greyShadow: hsla(0, 0%, 33%, 0.48);
-
     --textSmall: 20px;
     --textMedium: 32px;
     --textLarge: 46px;
@@ -24,10 +14,36 @@ body {
     font-family: Merriweather, serif;
 }
 
+.theme-light {
+    --gradTop: hsl(144, 100%, 89%);
+    --gradBottom: hsl(42, 94%, 76%);
+    --contrastBackground: hsl(0, 100%, 99%);
+    --border: hsl(0, 0%, 33%);
+    --borderShadow: hsla(0, 0%, 33%, 0.48);
+    --textColor: black;
+}
+
+.theme-dark {
+    --gradTop: hsl(198, 39%, 29%);
+    --gradBottom: hsl(198, 44%, 11%);
+    --contrastBackground: rgb(182, 215, 228);
+    --border: hsl(180, 4%, 43%);
+    --borderShadow: hsla(0, 0%, 89%, 0.48);
+    --textColor: white;
+}
+
 /* --------------------------------- main --------------------------------- */
 
 main {
-    background: linear-gradient(to bottom, var(--gradTopLight), var(--gradBottomLight));
+    background: linear-gradient(to bottom, var(--gradTop), var(--gradBottom));
+}
+
+/* --------------------------------- button --------------------------------- */
+
+button {
+    border: none;
+    padding: 0;
+    background: none;
 }
 
 /* --------------------------------- header --------------------------------- */
@@ -37,7 +53,7 @@ main {
     height: 90px;
     display: flex;
     justify-content: space-between;
-    background-color: var(--white);
+    background-color: var(--contrastBackground);
     width: 100%;
     z-index: 1000;
 }
@@ -54,13 +70,27 @@ main {
     margin-left: 40px;
     margin-right: 40px;
     font-size: var(--textSmall);
+    color: var(--textColor);
 }
 
 .header-decoration {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    border: 1px solid var(--grey);
-    box-shadow: 0 5px 14px -2px var(--greyShadow);
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 14px -2px var(--borderShadow);
+}
+
+.header-theme-changer {
+    margin: auto 40px auto auto;
+}
+
+.header-theme-changer:hover {
+    cursor: pointer;
+}
+
+.header-theme-changer-img {
+    width: 60px;
+    height: 60px;
 }
 
 /* --------------------------------- intro --------------------------------- */
@@ -70,13 +100,13 @@ main {
 }
 
 .intro-avatar {
-    padding-top: 150px;
+    padding-top: 200px;
 }
 
 .intro-img {
     display: flex;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     border-radius: 50%;
 }
@@ -84,11 +114,13 @@ main {
 .intro-name-text {
     font-size: var(--textLarge);
     text-align: center;
+    color: var(--textColor);
 }
 
 .intro-text {
     font-size: var(--textMedium);
     text-align: center;
+    color: var(--textColor);
 }
 
 .intro-social {
@@ -119,10 +151,18 @@ main {
 }
 
 @keyframes bounce {
-    0%   { transform: translate(0, 0); }
-    20%  { transform: translate(0, -30px); }
-    50%  { transform: translate(0, 0); }
-    100% { transform: translate(0, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(0, -30px);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 /* --------------------------------- about me --------------------------------- */
@@ -132,7 +172,7 @@ main {
 }
 
 .about-me-field {
-    background-color: var(--white);
+    background-color: var(--contrastBackground);
     padding: 40px;
 }
 
@@ -152,12 +192,13 @@ main {
     left: 50%;
     height: 323%;
     width: 4px;
-    background: var(--grey);
+    background: var(--border);
     margin-left: -2px;
 }
 
 .timeline-card-container {
     padding-top: 50px;
+    z-index: 10;
 }
 
 .timeline-img-item {
@@ -169,7 +210,7 @@ main {
 .timeline-img-item-decor {
     height: 60px;
     width: 60px;
-    background-color: var(--gradTopLight);
+    background-color: var(--gradTop);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,7 +224,7 @@ main {
 }
 
 .timeline-card {
-    background-color: var(--white);
+    background-color: var(--contrastBackground);
     width: 600px;
     margin-top: -60px;
     padding: 40px;
@@ -280,7 +321,7 @@ main {
 
 .card {
     width: 350px;
-    background-color: var(--white);
+    background-color: var(--contrastBackground);
     padding: 40px 40px 72px;
 }
 
@@ -301,7 +342,7 @@ main {
 }
 
 .project-link {
-   margin-top: 60px;
+    margin-top: 60px;
 }
 
 .project-link-img {
@@ -313,7 +354,7 @@ main {
 /* --------------------------------- footer --------------------------------- */
 
 .footer-container {
-    background-color: var(--white);
+    background-color: var(--contrastBackground);
     padding-left: 40px;
     padding-right: 40px;
     display: flex;
@@ -328,7 +369,7 @@ main {
 .footer-decoration {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    border: 1px solid var(--grey);
+    border: 1px solid var(--border);
 }
 
 /* --------------------------------- mixins --------------------------------- */
@@ -349,6 +390,7 @@ main {
 .section-title {
     font-size: var(--textMedium);
     text-align: center;
+    color: var(--textColor);
 }
 
 .section-card {
@@ -359,8 +401,8 @@ main {
 
 .card-decoration {
     border-radius: 5px;
-    border: 1px solid var(--grey);
-    box-shadow: 5px 5px 14px -2px var(--greyShadow);
+    border: 1px solid var(--border);
+    box-shadow: 5px 5px 14px -2px var(--borderShadow);
 }
 
 .social-img {

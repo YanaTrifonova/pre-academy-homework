@@ -12,18 +12,24 @@
 
     <link rel="icon" type="image/png" href="favicon.ico"/>
 
-    <script src="js/changeSocialLogo.js"></script>
+    <script src="js/changeSocialLogoOnMouseEnter.js"></script>
+    <script src="js/changeSocialLogoOnMouseOut.js"></script>
     <script src="js/removeMouseHintOnScroll.js"></script>
     <script src="js/addAnimationToTimeline.js"></script>
+    <script src="js/onThemeChange.js"></script>
 </head>
 
-<body>
+<body id="body" class="theme-light">
 
 <main id="main">
     <header class="header-container header-decoration">
         <div class="header-block-left">
             <a href="#main" class="header-text text-decoration-remover">Trifonova Yana</a>
         </div>
+
+        <button class="header-theme-changer" onclick="onThemeChange()">
+            <img class="header-theme-changer-img" src="img/brightness.svg" alt="Change theme color">
+        </button>
 
         <div class="header-block-right">
             <a href="#about-me" class="header-text text-decoration-remover">About me</a>
@@ -47,20 +53,21 @@
 
         <div class="intro-social">
             <a class="text-decoration-remover" target="_blank" href="https://github.com/YanaTrifonova">
-                <img class="social-img" onmouseover="onOver(this, 'github');" onmouseout="onOut(this, 'github');"
+                <img id="github" class="social-img" onmouseover="onEnter(this, 'github');"
+                     onmouseout="onOut(this, 'github');"
                      src="img/github_dark.svg" alt="github">
             </a>
             <a class="text-decoration-remover" target="_blank"
                href="https://www.linkedin.com/in/yana-trifonova-0920b3179/">
-                <img class="social-img" onmouseover="onOver(this, 'linkedin');"
+                <img id="linkedin" class="social-img" onmouseover="onEnter(this, 'linkedin');"
                      onmouseout="onOut(this, 'linkedin');" src="img/linkedin_dark.svg" alt="linked in">
             </a>
             <a class="text-decoration-remover" target="_blank" href="https://www.instagram.com/yana_trifonova/">
-                <img class="social-img" onmouseover="onOver(this, 'instagram');"
+                <img id="instagram" class="social-img" onmouseover="onEnter(this, 'instagram');"
                      onmouseout="onOut(this, 'instagram');" src="img/instagram_dark.svg" alt="instagram">
             </a>
             <a class="text-decoration-remover" href="mailto: trifonova.yana.prof@gmail.com">
-                <img class="social-img" onmouseover="onOver(this, 'mail');" onmouseout="onOut(this, 'mail');"
+                <img id="mail" class="social-img" onmouseover="onEnter(this, 'mail');" onmouseout="onOut(this, 'mail');"
                      src="img/mail_dark.svg" alt="e-mail">
             </a>
         </div>
@@ -271,21 +278,17 @@
         <p class="footer-contact-me-text">Contact me:</p>
         <div class="footer-social">
             <a class="text-decoration-remover" target="_blank" href="https://github.com/YanaTrifonova">
-                <img class="social-img" onmouseover="onOver(this, 'github');" onmouseout="onOut(this, 'github');"
-                     src="img/github_dark.svg" alt="github">
+                <img class="social-img" src="img/github_dark.svg" alt="github">
             </a>
             <a class="text-decoration-remover" target="_blank"
                href="https://www.linkedin.com/in/yana-trifonova-0920b3179/">
-                <img class="social-img" onmouseover="onOver(this, 'linkedin');"
-                     onmouseout="onOut(this, 'linkedin');" src="img/linkedin_dark.svg" alt="linked in">
+                <img class="social-img" src="img/linkedin_dark.svg" alt="linked in">
             </a>
             <a class="text-decoration-remover" target="_blank" href="https://www.instagram.com/yana_trifonova/">
-                <img class="social-img" onmouseover="onOver(this, 'instagram');"
-                     onmouseout="onOut(this, 'instagram');" src="img/instagram_dark.svg" alt="instagram">
+                <img class="social-img" src="img/instagram_dark.svg" alt="instagram">
             </a>
             <a class="text-decoration-remover" href="mailto: trifonova.yana.prof@gmail.com">
-                <img class="social-img" onmouseover="onOver(this, 'mail');" onmouseout="onOut(this, 'mail');"
-                     src="img/mail_dark.svg" alt="e-mail">
+                <img class="social-img" src="img/mail_dark.svg" alt="e-mail">
             </a>
         </div>
     </footer>
