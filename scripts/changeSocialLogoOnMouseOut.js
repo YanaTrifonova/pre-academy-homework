@@ -4,9 +4,9 @@ function onOut(element, networkName) {
 
     elementClassList.forEach((classValue) => {
         if (classValue === "theme-dark") {
-            imgSrc = 'img/' + networkName + '_light.svg';
+            imgSrc = 'images/' + networkName + '_light.svg';
         } else if (classValue === "theme-light") {
-            imgSrc = 'img/' + networkName + '_dark.svg';
+            imgSrc = 'images/' + networkName + '_dark.svg';
         } else {
             console.log("error: "+ elementClassList + "does not contains neither theme-light nor theme-light")
         }

@@ -1,4 +1,4 @@
 function onEnter(element, networkName) {
-    let value = 'img/' + networkName + '_colored.svg';
+    let value = 'images/' + networkName + '_colored.svg';
     element.setAttribute('src', value);
 }
