@@ -90,6 +90,10 @@ button {
     cursor: pointer;
 }
 
+.header-theme-changer:focus {
+    outline-style: none;
+}
+
 .header-theme-changer-img {
     width: 60px;
     height: 60px;
@@ -170,7 +174,7 @@ button {
 /* --------------------------------- about me --------------------------------- */
 
 .about-me-container {
-    padding-bottom: 200px;
+    padding-bottom: 80px;
 }
 
 .about-me-field {
