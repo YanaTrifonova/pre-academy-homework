@@ -15,18 +15,18 @@ function onThemeChange() {
         elementClassList.remove("theme-light");
         elementClassList.add("theme-dark");
 
-        githubImg.src="images/github_light.svg";
-        linkedinImg.src="images/linkedin_light.svg";
-        instagramImg.src="images/instagram_light.svg";
-        mailImg.src="images/mail_light.svg";
+        githubImg.src="images/social/github_light.svg";
+        linkedinImg.src="images/social/linkedin_light.svg";
+        instagramImg.src="images/social/instagram_light.svg";
+        mailImg.src="images/social/mail_light.svg";
 
     } else {
         elementClassList.remove("theme-dark");
         elementClassList.add("theme-light");
 
-        githubImg.src="images/github_dark.svg";
-        linkedinImg.src="images/linkedin_dark.svg";
-        instagramImg.src="images/instagram_dark.svg";
-        mailImg.src="images/mail_dark.svg";
+        githubImg.src="images/social/github_dark.svg";
+        linkedinImg.src="images/social/linkedin_dark.svg";
+        instagramImg.src="images/social/instagram_dark.svg";
+        mailImg.src="images/social/mail_dark.svg";
     }
 }

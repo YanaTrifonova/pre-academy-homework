@@ -196,7 +196,7 @@ button {
     content: "";
     position: absolute;
     left: 50%;
-    height: 550%;
+    height: 600%;
     width: 4px;
     background: var(--border);
     margin-left: -2px;
